@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[dev]
+  command = "npm run start"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  API_URL = "https://api.example.com"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+  API_URL = "https://api.dev.example.com"
